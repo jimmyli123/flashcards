@@ -1,0 +1,48 @@
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    row-gap: 50px;
+
+}
+.wrapper{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}
+.word, .meaning {
+
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid blue;
+}
+
+.meaning{
+    opacity: 0;
+}
+.meaning:hover{
+    animation: showContent .5s linear 1 forwards;
+    /* opacity: 1;
+    background-color: yellow; */
+}
+@keyframes showContent {
+    to{
+        opacity: 1;
+        background-color: yellow;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        row-gap: 25px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .box{
+        grid-template-columns: 250px;
+        justify-content: center;
+    }
+}
