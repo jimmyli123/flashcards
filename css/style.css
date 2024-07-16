@@ -1,4 +1,10 @@
+@property --background-image {
+    /* Custom property things */
+}
 
+body {
+    color: white;
+}
 .box{
     display: grid;
     grid-template-columns: repeat(3, 250px);
@@ -9,6 +15,8 @@
     width: 200px;
     height: 200px;
     border: 1px solid red;
+    background-image: url(/images/nightstars.jpg);
+    background-size: cover;
 }
 .word, .meaning {
 
