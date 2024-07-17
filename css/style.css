@@ -1,45 +1,56 @@
-@property --background-image {
-    /* Custom property things */
+:root {
+    --clr-dark: #020617;
+    --clr-light: yellow;
+    --bkgd-img: url(/images/nightstars.jpg);
 }
 
-body {
+* {
     color: white;
+    box-sizing: border-box; 
 }
 .box{
     display: grid;
-    grid-template-columns: repeat(3, 250px);
-    row-gap: 50px;
-
+    grid-template-columns: repeat(3, 450px);
+    row-gap: 100px;
+    justify-content: center;
 }
 .wrapper{
-    width: 200px;
-    height: 200px;
+    position: relative;
+    width: 300px;
+    height: 300px;
     border: 1px solid red;
-    background-image: url(/images/nightstars.jpg);
+    background-image: var(--bkgd-img);
+    /* background-image: url(/images/nightstars.jpg); */
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 .word, .meaning {
-
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
     border: 1px solid blue;
 }
-
 .meaning{
     opacity: 0;
+    padding-top: 50%;
 }
+
 .meaning:hover{
-    animation: showContent .5s linear 1 forwards;
+    animation: showMeaning .5s linear 1 forwards;
+    
     /* opacity: 1;
     background-color: yellow; */
 }
-@keyframes showContent {
+@keyframes showMeaning {
     to{
         opacity: 1;
-        background-color: yellow;
+        /* background-color: var(--clr-light); */
+        /* background-color: yellow; */
     }
 }
+
 
 @media screen and (max-width: 850px) {
     .box{
