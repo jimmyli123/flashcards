@@ -2,11 +2,15 @@
     --clr-dark: #020617;
     --clr-light: yellow;
     --bkgd-img: url(/images/nightstars.jpg);
+    --bkgd-clr: #515D68;
 }
 
 * {
     color: white;
     box-sizing: border-box; 
+}
+body {
+    background-color: var(--bkgd-clr);
 }
 .box{
     display: grid;
